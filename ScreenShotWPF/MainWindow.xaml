@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ScreenShotWPF"
         mc:Ignorable="d"
-        Title="MainWindow" Height="724.05" Width="525" Loaded="Window_Loaded">
+        Title="MainWindow" Height="724.05" Width="525">
     <Grid Margin="0,28,0,-842" Height="1507.05">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="251*"/>
@@ -25,7 +25,7 @@
         <Button x:Name="button" Content="Старт" Margin="70,16.779,89.5,9.216" Click="button_Click" Grid.Row="2" d:LayoutOverrides="LeftMargin, RightMargin, TopMargin, BottomMargin"/>
         <Button x:Name="button1" Content="СТОП" Margin="20.702,16.779,23.54,10.218" Click="button1_Click" Grid.Row="2" Grid.Column="1"/>
         <Label x:Name="label" Content="Это программа по нажатия на кнопку &#xA;Старт начинает делать непрерывно скриншоты &#xA;экрана и сохранять их в файл. (работает).&#xD;&#xA;&#xD;&#xA;Сделать предыдущий пункт на основе таймера(Готово!!!).&#xD;&#xA;Перенести всё  курсовую!!!&#xA;Стоп - прекратить делать скриншоты.&#xA;" Margin="22,0,38.5,10" Grid.RowSpan="2"/>
-        <Image x:Name="image" Height="327" Margin="10,10,10,0" VerticalAlignment="Top" Grid.Row="7" Grid.ColumnSpan="3" d:LayoutOverrides="LeftMargin, RightMargin, TopMargin, BottomMargin" MouseDown="image_MouseDown"/>
+        <Image x:Name="image" Height="327" Margin="10,10,10,0" VerticalAlignment="Top" Grid.Row="7" Grid.ColumnSpan="3" d:LayoutOverrides="LeftMargin, RightMargin, TopMargin, BottomMargin" MouseLeftButtonUp="image_MouseDown" MouseLeftButtonDown="image_MouseDown" MouseRightButtonUp="image_MouseRightButtonDown"/>
         <Label x:Name="lblWidthMonitor" Content="Ширина Мон:" HorizontalAlignment="Left" Margin="10,12.031,0,9.997" Grid.Row="3" d:LayoutOverrides="Height" Width="192.5" RenderTransformOrigin="0.754,0.212"/>
         <Label x:Name="lblwidthImage" Content="Ширина скрина" Grid.Column="1" Margin="20.702,9.992,0,12.034" Grid.Row="3" d:LayoutOverrides="Height" Grid.ColumnSpan="2" HorizontalAlignment="Left" Width="180.643"/>
         <Label x:Name="lblHeightMonitor" Content="Высота монитора" Margin="10,10.041,48.5,-0.007" Grid.Row="4" d:LayoutOverrides="Height"/>
@@ -34,11 +34,11 @@
         <Label x:Name="DifferenceHeight" Content="Разница высота" Grid.Column="1" Margin="20.702,8.006,0,1.028" Grid.Row="6" d:LayoutOverrides="Height" Grid.ColumnSpan="2" HorizontalAlignment="Left" Width="180.643"/>
         <Label x:Name="lblCoordinateXYInMonitor" Content="Координаты на мониторе" HorizontalAlignment="Left" Margin="10,0.004,0,13.037" Grid.Row="5" d:LayoutOverrides="Height" Width="231"/>
         <Label x:Name="lblCoordinateXYInImage" Content="Координаты на скрине" Grid.Column="1" HorizontalAlignment="Left" Margin="10,5.003,0,8.038" Grid.Row="5" d:LayoutOverrides="Height" Width="246" Grid.ColumnSpan="2"/>
-        <TextBox x:Name="tbxX2" Grid.Column="1" Margin="32.702,10.492,26.041,4.01" TextWrapping="Wrap" Text="500" Grid.Row="1" ToolTip="X2"/>
-        <TextBox x:Name="tbxY2" Grid.Column="2" Margin="34,10.492,41.14,4.01" TextWrapping="Wrap" Text="500" Grid.Row="1" ToolTip="Y2"/>
+        <TextBox x:Name="tbxX2" Grid.Column="1" Margin="32.702,10.492,26.041,4.01" TextWrapping="Wrap" Grid.Row="1" ToolTip="X2"/>
+        <TextBox x:Name="tbxY2" Grid.Column="2" Margin="34,10.492,41.14,4.01" TextWrapping="Wrap" Grid.Row="1" ToolTip="Y2"/>
         <Button x:Name="btnMoveCoursor" Content="Переместить К" Grid.Column="2" Margin="34,15.823,23.743,10.218" Grid.Row="2" d:LayoutOverrides="Height" Click="btnMoveCoursor_Click"/>
-        <TextBox x:Name="tbxX1" Grid.Column="1" Margin="32.702,4,26.041,0.508" TextWrapping="Wrap" Text="257" ToolTip="X1"/>
-        <TextBox x:Name="tbxY1" Grid.Column="2" Margin="34,4,41.14,0.508" TextWrapping="Wrap" Text="39" ToolTip="Y1"/>
+        <TextBox x:Name="tbxX1" Grid.Column="1" Margin="32.702,4,26.041,0.508" TextWrapping="Wrap" ToolTip="X1"/>
+        <TextBox x:Name="tbxY1" Grid.Column="2" Margin="34,4,41.14,0.508" TextWrapping="Wrap" ToolTip="Y1"/>
 
     </Grid>
 </Window>
